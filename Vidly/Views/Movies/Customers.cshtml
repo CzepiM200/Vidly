@@ -1,0 +1,25 @@
+﻿@model Vidly.ViewModels.CustomersList
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    // If amount of customers rented this movie is grater than 5
+    // set className = "popular" other whise test null
+    var className = Model.Customers.Count > 1 ? "popular" : null;
+}
+
+@if(Model.Customers.Count == 0)
+{ 
+    <text> No one has rented this movie before </text>
+}
+else 
+{
+    <ul>
+        @foreach(var customer in Model.Customers)
+        {
+            <li>@customer.Id - @customer.Name</li>
+        }
+    </ul>
+}
