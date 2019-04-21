@@ -10,24 +10,7 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        [Route("movies/Customers")]
-        public ActionResult Customers()
-        {
-            var customers = new List<Customer>
-            {
-                new Customer {Name = "Customer 1", Id = 0},
-                new Customer {Name = "Customer 2", Id = 1},
-                new Customer {Name = "Customer 3", Id = 2}
-            };
-
-            var movieList = new CustomersList()
-            {
-                Customers = customers
-            };
-
-            return View(movieList);
-        }
-
+        
         [Route("movies/{id}")]
         public ActionResult Movie()
         {
