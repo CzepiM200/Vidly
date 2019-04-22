@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>List of customers</h2>
+@if (!Model.Any())
+{
+<div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Oh snap! <br/></strong> <a href="#" class="alert-link">We can't find any customer :/<br/></a> Try again later....
+</div>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Customer</td>
+                <td>Discount Rate</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.Id</td>
+                    <td><a href=customers/@customer.Id>@customer.Name</a></td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

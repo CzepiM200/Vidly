@@ -10,23 +10,22 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        
+        private VidlyDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new VidlyDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         [Route("movies/{id}")]
         public ActionResult Movie()
         {
-            var customerList = new List<Customer>()
-            {
-                new Customer { Id = 1, Name = "Michał" },
-                new Customer { Id = 2, Name = "Damian" },
-                new Customer { Id = 3, Name = "Agata" }
-            };
-
-            var list = new CustomersListForMovie()
-            {
-                Movie = new Movie() { Id = 0, Name = "Incepcja" },
-                Customers = customerList
-            };
-
+            //var customer = _context.Customers.Include(c => c.MembershipType).ToList();
             return View();
         }
 
