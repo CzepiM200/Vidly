@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201904221641420_AddoviesTable.Designer.cs">
       <DependentUpon>201904221641420_AddoviesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904221643522_PopulateGenre.cs" />
+    <Compile Include="Migrations\201904221643522_PopulateGenre.Designer.cs">
+      <DependentUpon>201904221643522_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -265,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904221641420_AddoviesTable.resx">
       <DependentUpon>201904221641420_AddoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904221643522_PopulateGenre.resx">
+      <DependentUpon>201904221643522_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
