@@ -6,4 +6,20 @@
 
 <h2>@Model.Name</h2>
 
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td><b>Id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Type od subscroiption</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.MembershipType.Name</td>
+        </tr>
+    </tbody>
+</table>
 
