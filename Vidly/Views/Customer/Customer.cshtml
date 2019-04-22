@@ -12,6 +12,10 @@
             <td><b>Id</b></td>
             <td><b>Name</b></td>
             <td><b>Type od subscroiption</b></td>
+            @if (Model.Birthdate != null)
+            {
+                <td><b>Birthday</b></td>
+            }
         </tr>
     </thead>
     <tbody>
@@ -19,6 +23,10 @@
             <td>@Model.Id</td>
             <td>@Model.Name</td>
             <td>@Model.MembershipType.Name</td>
+            @if (Model.Birthdate != null)
+            {
+                <td><b>@Model.Birthdate.Value.ToShortDateString()</b></td>
+            }
         </tr>
     </tbody>
 </table>
