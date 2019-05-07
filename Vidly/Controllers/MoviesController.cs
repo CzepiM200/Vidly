@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
@@ -32,19 +33,8 @@ namespace Vidly.Controllers
         [Route("movies/")]
         public ActionResult Movies()
         {
-            var movies = new List<Movie>
-            {
-                new Movie { Id = 1, Name = "Szybcy i Wściekli 1"},
-                new Movie { Id = 2, Name = "Szybcy i Wściekli 2"},
-                new Movie { Id = 3, Name = "Szybcy i Wściekli 3"}
-            };
-
-            var movieList = new MovieList
-            {
-                ListOfMovies = movies
-            };
-
-            return View(movieList);
+            var movie = _context.Movies.Include(c => c.Genre).ToList();
+            return View(movie);
         }
 
 

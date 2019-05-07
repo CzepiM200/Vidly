@@ -172,6 +172,14 @@
     <Compile Include="Migrations\201904221643522_PopulateGenre.Designer.cs">
       <DependentUpon>201904221643522_PopulateGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905070953520_PopulateMovies.cs" />
+    <Compile Include="Migrations\201905070953520_PopulateMovies.Designer.cs">
+      <DependentUpon>201905070953520_PopulateMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905071005291_PopulateMovies2.cs" />
+    <Compile Include="Migrations\201905071005291_PopulateMovies2.Designer.cs">
+      <DependentUpon>201905071005291_PopulateMovies2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -272,6 +280,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904221643522_PopulateGenre.resx">
       <DependentUpon>201904221643522_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905070953520_PopulateMovies.resx">
+      <DependentUpon>201905070953520_PopulateMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905071005291_PopulateMovies2.resx">
+      <DependentUpon>201905071005291_PopulateMovies2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
