@@ -31,7 +31,7 @@ else
         {
         <tr>
             <td>@movie.Id</td>
-            <td>@movie.Name </td>
+            <td><a href=movies/@movie.Id> @movie.Name</a></td>
             <td>@movie.Genre.Name</td>
             <td>@movie.ReleaseDate.ToShortDateString()</td>
             <td>@movie.DateAdded.ToShortDateString()</td>

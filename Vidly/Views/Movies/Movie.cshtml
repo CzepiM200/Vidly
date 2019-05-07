@@ -5,5 +5,27 @@
 }
 
 
-<h2>Movie xD</h2>
+<h2>@Model.Name</h2>
 
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Genre</td>
+            <td>Release Date</td>
+            <td>Addes Date</td>
+            <td>Number In Stock</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Genre.Name</td>
+            <td>@Model.ReleaseDate.ToShortDateString()</td>
+            <td>@Model.DateAdded.ToShortDateString()</td>
+            <td>@Model.NumberInStock</td>
+        </tr>
+    </tbody>
+</table>

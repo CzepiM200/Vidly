@@ -24,10 +24,13 @@ namespace Vidly.Controllers
         }
 
         [Route("movies/{id}")]
-        public ActionResult Movie()
+        public ActionResult Movie(int id)
         {
-            //var customer = _context.Customers.Include(c => c.MembershipType).ToList();
-            return View();
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+
+            if (movie == null) return HttpNotFound();
+
+            return View(movie);
         }
 
         [Route("movies/")]
