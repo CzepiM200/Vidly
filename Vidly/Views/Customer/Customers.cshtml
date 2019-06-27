@@ -22,6 +22,7 @@ else
                 <td>Customer</td>
                 <td>Type of subscription</td>
                 <td>Discount Rate</td>
+                <td>Edit</td>
             </tr>
         </thead>
         <tbody>
@@ -32,6 +33,7 @@ else
                     <td><a href=customers/@customer.Id>@customer.Name</a></td>
                     <td>@customer.MembershipType.Name</td>
                     <td>@customer.MembershipType.DiscountRate%</td>
+                    <td><a href="customers/edit/@customer.Id">Edit</a></td>
                 </tr>
             }
         </tbody>
