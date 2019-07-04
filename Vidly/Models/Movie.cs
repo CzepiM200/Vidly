@@ -11,21 +11,21 @@ namespace Vidly.Models
         // POCO - bechaviour
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter customer's name.")]
         public string Name { get; set; }
 
         public Genre Genre { get; set; }
+
         [Required]
         public byte  GenreId { get; set; }
 
         [Required]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; } = DateTime.Now;
 
         public DateTime DateAdded { get; set; }
 
         [Required]
+        [Range(1, 30)]
         public byte NumberInStock { get; set; }
     }
-
-
 }

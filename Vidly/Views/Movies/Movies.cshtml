@@ -6,6 +6,12 @@
 
 <h2>List of movies</h2>
 
+<a href="movies/new"><button type="button" class="btn btn-primary">Add movie</button></a>
+
+<div >
+
+</div>
+
 @if(!Model.Any())
 {
 <div class="alert alert-dismissible alert-danger">
@@ -24,6 +30,7 @@ else
             <td>Release Date</td>
             <td>Added Date</td>
             <td>Number In Stock</td>
+            <td>Edit</td>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +43,7 @@ else
             <td>@movie.ReleaseDate.ToShortDateString()</td>
             <td>@movie.DateAdded.ToShortDateString()</td>
             <td>@movie.NumberInStock</td>
+            <td><a href="movies/edit/@movie.Id">Edit</a></td>
         </tr>
         }
     </tbody>

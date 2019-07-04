@@ -184,10 +184,15 @@
     <Compile Include="Migrations\201905211911135_AddConstraintsToMovieProperties.Designer.cs">
       <DependentUpon>201905211911135_AddConstraintsToMovieProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907022020207_AddRangeToNumberInStock.cs" />
+    <Compile Include="Migrations\201907022020207_AddRangeToNumberInStock.Designer.cs">
+      <DependentUpon>201907022020207_AddRangeToNumberInStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\VidlyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -297,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905211911135_AddConstraintsToMovieProperties.resx">
       <DependentUpon>201905211911135_AddConstraintsToMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907022020207_AddRangeToNumberInStock.resx">
+      <DependentUpon>201907022020207_AddRangeToNumberInStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
